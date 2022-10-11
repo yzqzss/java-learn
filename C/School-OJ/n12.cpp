@@ -16,13 +16,13 @@ int main(){
 	scanf("%d %d", &l,&t);
 	
 	// L fee
-	l<=2         ? feeL=60                    : NULL;
-	2<l && l<=10 ? feeL=60+(l-2)*18           : NULL;
-	10<l         ? feeL=60+(l-2)*18+(l-10)*9  : NULL;
+	l<=2         ? feeL=60                    : 0;
+	2<l && l<=10 ? feeL=60+(l-2)*18           : 0;
+	10<l         ? feeL=60+(l-2)*18+(l-10)*9  : 0;
 	
 	// T fee
-	t<3          ? feeT=0                     : NULL;
-	3<=t         ? feeT=(t/3)*10              : NULL;
+	t<3          ? feeT=0                     : 0;
+	3<=t         ? feeT=(t/3)*10              : 0;
 	
 	int sumFee;
 	sumFee=feeL+feeT;
