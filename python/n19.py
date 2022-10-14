@@ -29,8 +29,8 @@ print(datePlusOne.strftime('%#Y %#m %#d'),end="")
 """
 
 
-b=31 # Big Mon
-m=30 # Min Mon
+bMon=31 # Big Mon
+mMon=30 # Min Mon
 
 def Feb_days(y):
     is_leapyear = ( ( (y % 4) == 0) and ((y % 100) != 0)) or ((y % 400) == 0)
@@ -43,10 +43,10 @@ def Feb_days(y):
 y,m,d = map(int, input().split())
 
 feb = Feb_days(y)
-Mon = {1:b, 2:feb, 3:b, 4:m, 5:b, 6:m, 7:b, 8:b, 9:m, 10:b, 11:m, 12:b}
+Mon = {1:bMon, 2:feb, 3:bMon, 4:mMon, 5:bMon, 6:mMon, 7:bMon, 8:bMon, 9:mMon, 10:bMon, 11:mMon, 12:bMon}
 
 
-print(Mon[m)
+#print(d, Mon[m])
 
 def func():
     global y,m,d
@@ -64,6 +64,5 @@ def func():
         return None
 
 func()
-
 
 print(y, m, d, end="")
