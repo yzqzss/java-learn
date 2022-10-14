@@ -1,5 +1,11 @@
 #include <stdio.h>
 
 int main(){
-    printf("\%");
+    int var;
+    printf("%d\n", var);
 }
+
+
+// int main(){
+//     printf("\%");
+// }

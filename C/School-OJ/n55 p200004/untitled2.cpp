@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <Math.h>
+#include <math.h>
 
 main(){
 	int count1 = 0;//质数个数
