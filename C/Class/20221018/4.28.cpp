@@ -33,6 +33,7 @@ int main(){
 
 int main(){
     int x;scanf("%d",&x);
+    if (x>100) {printf("[Error] 爆分了，你厉害！");return 1;}
     switch (x/10){
         case 10:
         case  9:printf("A");break;
