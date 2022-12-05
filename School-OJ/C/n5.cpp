@@ -14,33 +14,33 @@ int location = 0;
 int child [ 5 ];
 
 int flag(int offset){
-	int realLocation = (location + offset)%5;
-	if (realLocation < 0){
-		realLocation+=5;//正余数
-	}
-//	printf("(位置:%d)", realLocation);
-	return realLocation;
+    int realLocation = (location + offset)%5;
+    if (realLocation < 0){
+        realLocation+=5;//正余数
+    }
+//    printf("(位置:%d)", realLocation);
+    return realLocation;
 }
 
 int main(){
-	for (; location < 5; location++){
-		scanf("%d", &child[location]);
-	}
-	
-	
-	location = 0;
-	int one;
-	for (; location < 5; location++){
-		one = child[location]/3;
-//		printf("(一份:%d)", one);
-		child[flag(0)]=one;
-		child[flag(-1)]=child[flag(-1)]+one;
-		child[flag(+1)]=child[flag(+1)]+one;
-		
-//		printf("\n%d %d %d %d %d\n", child[0],child[1],child[2],child[3],child[4]);
-	}
-	
-	printf("%d %d %d %d %d", child[0],child[1],child[2],child[3],child[4]);
+    for (; location < 5; location++){
+        scanf("%d", &child[location]);
+    }
+    
+    
+    location = 0;
+    int one;
+    for (; location < 5; location++){
+        one = child[location]/3;
+//        printf("(一份:%d)", one);
+        child[flag(0)]=one;
+        child[flag(-1)]=child[flag(-1)]+one;
+        child[flag(+1)]=child[flag(+1)]+one;
+        
+//        printf("\n%d %d %d %d %d\n", child[0],child[1],child[2],child[3],child[4]);
+    }
+    
+    printf("%d %d %d %d %d", child[0],child[1],child[2],child[3],child[4]);
 }
 
 

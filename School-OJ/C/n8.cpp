@@ -9,11 +9,11 @@ int a,b,c,d;
 int startTimeSec,endTimeSec,spendTimeSec;
 
 int main(){
-	scanf("%d %d %d %d", &a,&b,&c,&d);
-	startTimeSec=a*3600+b*60;
-	endTimeSec=c*3600+d*60;
-	spendTimeSec=endTimeSec-startTimeSec;
-	spendTimeSec<0 ? spendTimeSec=3600*24+spendTimeSec : NULL;// 尝试使用 `?` `:` 来替代 `if` `else`，压缩条件语句的行数。（来源：<https://www.bilibili.com/read/cv10771145>）
-	printf("%d %d", (spendTimeSec/3600),((spendTimeSec/60)%60));
+    scanf("%d %d %d %d", &a,&b,&c,&d);
+    startTimeSec=a*3600+b*60;
+    endTimeSec=c*3600+d*60;
+    spendTimeSec=endTimeSec-startTimeSec;
+    spendTimeSec<0 ? spendTimeSec=3600*24+spendTimeSec : NULL;// 尝试使用 `?` `:` 来替代 `if` `else`，压缩条件语句的行数。（来源：<https://www.bilibili.com/read/cv10771145>）
+    printf("%d %d", (spendTimeSec/3600),((spendTimeSec/60)%60));
 }
 

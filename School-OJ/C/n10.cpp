@@ -16,9 +16,9 @@
 int n,m,chicken,rabbit;
 
 int main(){
-	scanf("%d %d", &n,&m);
-	for (chicken=0;chicken<=n;chicken++){
-		rabbit = n - chicken;
-		(((2*chicken) + (4*rabbit)) == m) ? printf("%d %d", chicken,rabbit) : NULL;
-	}
+    scanf("%d %d", &n,&m);
+    for (chicken=0;chicken<=n;chicken++){
+        rabbit = n - chicken;
+        (((2*chicken) + (4*rabbit)) == m) ? printf("%d %d", chicken,rabbit) : NULL;
+    }
 }

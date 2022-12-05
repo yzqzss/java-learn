@@ -18,10 +18,10 @@ int price,money;
 int pencils,leftMoney;
 
 int main(){
-	scanf("%d %d %d %d %d", &a,&b,&x,&y,&z);
-	price=a*10+b;
-	money=x*100+y*10+z;
-	pencils=money/price;
-	leftMoney=money-(price*pencils);
-	printf("%d %d %d", pencils,(leftMoney/10),(leftMoney%10));		
+    scanf("%d %d %d %d %d", &a,&b,&x,&y,&z);
+    price=a*10+b;
+    money=x*100+y*10+z;
+    pencils=money/price;
+    leftMoney=money-(price*pencils);
+    printf("%d %d %d", pencils,(leftMoney/10),(leftMoney%10));        
 }

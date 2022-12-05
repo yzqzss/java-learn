@@ -7,10 +7,10 @@
 #include <stdio.h>
 
 int main(){
-	int SUM = 6*96;
-	int noMaxSum = 5*94;
-	int noMinSum = 5*98;
-	double evlRaw = (SUM-(SUM-noMaxSum)-(SUM-noMinSum));double evl = evlRaw/4/10;
+    int SUM = 6*96;
+    int noMaxSum = 5*94;
+    int noMinSum = 5*98;
+    double evlRaw = (SUM-(SUM-noMaxSum)-(SUM-noMinSum));double evl = evlRaw/4/10;
 
-	printf("%.2f", evl);
+    printf("%.2f", evl);
 }

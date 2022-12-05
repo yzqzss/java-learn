@@ -2,11 +2,11 @@
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 func main() {
-	var t int
-	fmt.Scanf("%d", &t)
-	fmt.Printf("%d:%d:%d", (t / 3600), (t/60)%60, t%60)
+    var t int
+    fmt.Scanf("%d", &t)
+    fmt.Printf("%d:%d:%d", (t / 3600), (t/60)%60, t%60)
 }

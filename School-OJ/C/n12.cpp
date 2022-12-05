@@ -6,31 +6,31 @@
 
 
 //int feeL(){
-//	l<=2 ? return(60) : NULL;
+//    l<=2 ? return(60) : NULL;
 //}
 
 
 int main(){
-	int l,t;
-	int feeL,feeT;
-	scanf("%d %d", &l,&t);
-	
-	// L fee
-	l<=2         ? feeL=60                    : 0;
-	2<l && l<=10 ? feeL=60+(l-2)*18           : 0;
-	10<l         ? feeL=60+(l-2)*18+(l-10)*9  : 0;
-	
-	// T fee
-	t<3          ? feeT=0                     : 0;
-	3<=t         ? feeT=(t/3)*10              : 0;
-	
-	int sumFee;
-	sumFee=feeL+feeT;
-	
-	if (sumFee%10 == 0) {//整数判断
-		printf("%d", (sumFee/10));
-	}else{
-		double FloatedSumFee=(double)sumFee/10;
-		printf("%.1f", FloatedSumFee);
-	}
+    int l,t;
+    int feeL,feeT;
+    scanf("%d %d", &l,&t);
+    
+    // L fee
+    l<=2         ? feeL=60                    : 0;
+    2<l && l<=10 ? feeL=60+(l-2)*18           : 0;
+    10<l         ? feeL=60+(l-2)*18+(l-10)*9  : 0;
+    
+    // T fee
+    t<3          ? feeT=0                     : 0;
+    3<=t         ? feeT=(t/3)*10              : 0;
+    
+    int sumFee;
+    sumFee=feeL+feeT;
+    
+    if (sumFee%10 == 0) {//整数判断
+        printf("%d", (sumFee/10));
+    }else{
+        double FloatedSumFee=(double)sumFee/10;
+        printf("%.1f", FloatedSumFee);
+    }
 }
