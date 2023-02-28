@@ -260,11 +260,10 @@ int main(){
 #define False 0
 
 int count=0;
-int numList[] = {2,3,5,7,11,13,17,19,23,29,31,37,41,43,47};// len(numList[])  =  15
+int numList[] = {2,3,5,7,11,13,17,19,23,29,31,37,41,43,47};
+// len(numList[])  =  15
 
 int isPrime(int x){
-    //这部分代码写成单独的函数，直接 return 就能结束执行，避免放 main() 里会产生多层 break 和多余的判断混乱。
-
     if (x<=47){
         //# 过一遍 被除数 小数字的碰撞筛查:
         for (int location=0; location<=14; location++){
@@ -284,7 +283,8 @@ int isPrime(int x){
     //## 确定遍历终止点，n除以2 之后是没价值的除数。
     // UPDATE: 这种算法太慢，废弃。
     int numTestRange_END   = sqrt(x);
-    //## 查了 [素数 - 维基百科](https://zh.wikipedia.org/zh-cn/质数#試除法) ，发现开根能减少遍历范围。
+    //## 查了 [素数 - 维基百科](https://zh.wikipedia.org/zh-cn/质数#試除法) 后，
+    // 发现开根能减少遍历范围。
 
     int numTestRange_START = 53;
     //## 确定遍历开始点，[0,52] 的除数在碰撞筛查时已经检查过了，所以从 53 开始。
@@ -403,7 +403,8 @@ int main(){
 
 int n,x;
 int _x;
-int numList[] = {2,3,5,7,11,13,17,19,23,29,31,37,41,43,47};// len(numList[])  =  15
+int numList[] = {2,3,5,7,11,13,17,19,23,29,31,37,41,43,47};
+// len(numList[])  =  15
 
 int isPrime(int x){
 
@@ -508,7 +509,9 @@ int main(){
 /* 
 定义数组 int a[4][6], b[4][6], c[4][6]
 1. 从键盘输入数据给数组 a、b
-2. 将 a 与 b 各对应元素做比较，如果相等，则数组 c 的对应元素 = 0 。若 a>b -> c=1 若 a<b -> c=-1
+2. 将 a 与 b 各对应元素做比较，如果相等，则数组 c 的对应元素 = 0 。
+
+若 a>b -> c=1 若 a<b -> c=-1
 */
 
 #include <stdio.h>
@@ -757,8 +760,14 @@ void printStudentData(struct students student){
     else printf("sex: Other(code=%d)\n", student.sex);
     
     printf("age: %d\n", student.age);
-    printf("scores: %.2f %.2f %.2f\n", student.score[0], student.score[1], student.score[2]);
-    printf("total_score: %.2f | avg_score: %.2f\n", count(student.score), avg(student.score));
+    printf(
+        "scores: %.2f %.2f %.2f\n",
+        student.score[0], student.score[1], student.score[2]
+    );
+    printf(
+        "total_score: %.2f | avg_score: %.2f\n",
+        count(student.score), avg(student.score)
+    );
 };
 
 int main(){
