@@ -1,5 +1,3 @@
-# log
-
 ## 20220927
 
 ### helloWorld
@@ -25,7 +23,7 @@ int main(){
 }
 ```
 
-### monckeyPatchAdd
+### Add_shell
 
 ```c
 // 把加法包装一下，就叫“设计”加法器？？
@@ -41,6 +39,10 @@ int main(){
     printf("%d",add(a,b));
 }
 ```
+
+<div STYLE="page-break-after: always;"></div>
+
+---
 
 ## 20221004
 
@@ -91,6 +93,10 @@ int main(){
 
 // 16 2.1   29  2.12
 ```
+
+<div STYLE="page-break-after: always;"></div>
+
+---
 
 ## 20221011
 
@@ -151,10 +157,14 @@ int main(){
 }
 ```
 
+<div STYLE="page-break-after: always;"></div>
+
+---
+
 ## 20221018
 
 ### t4.28
-<!-- 开始使用VSC -->
+
 ```c
 /*分支结构---成绩等级
 
@@ -243,6 +253,10 @@ int main(){
     }
 }
 ```
+
+<div STYLE="page-break-after: always;"></div>
+
+---
 
 ## 20221025
 
@@ -389,6 +403,10 @@ int main(){
 }
 ```
 
+<div STYLE="page-break-after: always;"></div>
+
+---
+
 ## 20221102
 
 ### t6.38
@@ -422,7 +440,7 @@ int isPrime(int x){
     int numTestRange_END   = sqrt(x);
     int numTestRange_START = 53     ;
     
-    for (int numTest=numTestRange_START; numTest<=numTestRange_END; numTest+=2){
+    for (int numTest=numTestRange_START;numTest<=numTestRange_END; numTest+=2){
         if  (x%numTest == 0){return False;}
     }
     
@@ -446,6 +464,10 @@ int main(){
     // printf("%d",count);
 }
 ```
+
+<div STYLE="page-break-after: always;"></div>
+
+---
 
 ## 20221108
 
@@ -501,6 +523,8 @@ int main(){
 }
 ```
 
+<div STYLE="page-break-after: always;"></div>
+---
 ## 20221115
 
 ### t7.48
@@ -586,6 +610,10 @@ int main(){
     }
 }
 ```
+
+<div STYLE="page-break-after: always;"></div>
+
+---
 
 ## 20221122
 
@@ -680,6 +708,10 @@ int main(){
     }
 }
 ```
+
+<div STYLE="page-break-after: always;"></div>
+
+---
 
 ## 20221129
 
