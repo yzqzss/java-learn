@@ -17,29 +17,20 @@ Output
 输出学生成绩对应的等级*/
 
 
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
-/*
+
 int main(){
     int x;
-    scanf("%d",&x);
-    if      (x>=90) printf("A");
-    else if (x>=80) printf("B");
-    else if (x>=70) printf("C");
-    else if (x>=60) printf("D");
-    else            printf("E");
-}
-*/
-
-int main(){
-    int x;scanf("%d",&x);
-    if (x>100) {printf("[Error] 爆分了，你厉害！");return 1;}
+    cin>>x;
+    if (x>100) {cout<<"[Error] 爆分了，你厉害！";return 1;}
     switch (x/10){
         case 10:
-        case  9:printf("A");break;
-        case  8:printf("B");break;
-        case  7:printf("C");break;
-        case  6:printf("D");break;
-        default:printf("E");
+        case  9:cout<<"A";break;
+        case  8:cout<<"B";break;
+        case  7:cout<<"C";break;
+        case  6:cout<<"D";break;
+        default:cout<<"E";
     }
 }

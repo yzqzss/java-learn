@@ -41,6 +41,5 @@ int isPrime(int x){//这部分代码写成单独的函数，直接 return 就能
 int main(){
     int x;
     scanf("%d",&x);
-    if (isPrime(x)){printf("Yes");}
-    else           {printf("No"); }
+    isPrime(x) ? printf("True") : printf("False");
 }
