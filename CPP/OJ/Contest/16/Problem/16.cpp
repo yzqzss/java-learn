@@ -22,14 +22,14 @@ bool is_prime(int x){
 
 int main(){
     int primes[LEN];
-    int _index = 0, __tmp_num = 1;
-    while (_index<LEN){
-        if (!is_prime(__tmp_num)){
-            __tmp_num++;
+    int index = 0, _tmp_num = 1;
+    while (index<LEN){
+        if (!is_prime(_tmp_num)){
+            _tmp_num++;
             continue;
         }
-        primes[_index] = __tmp_num;
-        __tmp_num++, _index++;
+        primes[index] = _tmp_num;
+        _tmp_num++, index++;
     }
     // int p1,p2,p3;
     for (int p1=0;p1<LEN;p1++){
