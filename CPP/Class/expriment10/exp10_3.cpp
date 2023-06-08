@@ -50,7 +50,7 @@ int main(){
     for (int i = 0; i < n; i++){
         input_data(&stus[i]);
     }
-    cout << '==== 全部学生信息 ====';
+    cout << "==== 全部学生信息 ====" << endl;
     for (int i = 0; i < n; i++){
         print_data(&stus[i]);
     }

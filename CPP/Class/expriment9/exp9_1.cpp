@@ -27,5 +27,4 @@ int main(){
     char dest[100];
     strcopy_from(src, dest, 3, 100);
     cout << dest << endl;
-    return 0;
 }

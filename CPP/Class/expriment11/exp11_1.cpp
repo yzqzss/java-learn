@@ -39,6 +39,4 @@ int main(){
     t.show();
     t.set(12,54,59);
     t.show();
-
-    delete &t;
 }
