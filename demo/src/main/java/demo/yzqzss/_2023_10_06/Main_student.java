@@ -1,4 +1,4 @@
-package demo.yzqzss;
+package demo.yzqzss._2023_10_06;
 
 public class Main_student {
     public static void main(String[] args) {

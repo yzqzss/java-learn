@@ -1,4 +1,4 @@
-package demo.yzqzss;
+package demo.yzqzss._2023_10_06;
 // 定义一个Student类，包含id，name、sex、age成员变量
 // 为 Student 类创建2个构造方法，一个无参构造方法，一个为有参构造方法；实现成员变量（类的属性）的初始化操作。
 // 在main方法中创建Student类的对象并输出对象的属性值。

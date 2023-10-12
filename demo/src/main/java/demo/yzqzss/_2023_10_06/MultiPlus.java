@@ -1,4 +1,4 @@
-package demo.yzqzss;
+package demo.yzqzss._2023_10_06;
 
 public class MultiPlus {
     // 1!+2!+...20! = ?

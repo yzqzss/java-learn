@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 // 如果含有任意的空格、数字、标点符号，则切片
 
-public class StringStrip {
+public class StringSplit {
     public static void main(String[] args) {
 
-        String regex = "[\\s\\d\\p{Punct}]+"; // \s: 空格 \d: 数字 \p{Punct}: 标点符号
+        String regex = "[\\s\\d\\p{Punct}]+"; // \s: 空格 \d: 数字 \p{Punct}: 标点符号(unicode)
 
         // read stdin
         System.out.println("Input:");
