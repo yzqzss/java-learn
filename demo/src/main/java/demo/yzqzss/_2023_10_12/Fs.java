@@ -2,7 +2,7 @@ package demo.yzqzss._2023_10_12;
 
 import java.util.Scanner;
 
-import demo.yzqzss._2023_10_12.FakeComputer.CPU;
+// import demo.yzqzss._2023_10_12.FakeComputer.CPU;
 
 import java.util.ArrayList;
 
@@ -55,14 +55,20 @@ public class Fs {
         @Override
         protected int read_(byte[] out_addr){
             // read file and write to out_addr
-            return 0;
+            try {
+                Computer.CPU.memcpy(out_addr, this.content, this.content.length);
+                return 0;
+            } catch (Exception e) {
+                return 1;
+            }
         }
 
         @Override
         protected int write_(byte[] stream){
             try {
-                FakeComputer.CPU.memset(content, (byte)0, content.length);
-                FakeComputer.CPU.memcpy(content, stream, stream.length);
+                assert stream.length <= this.content.length;
+                Computer.CPU.memset(this.content, (byte)0, this.content.length);
+                Computer.CPU.memcpy(this.content, stream, stream.length);
                 return 0;
             } catch (Exception e) {
                 return 1;
@@ -87,6 +93,7 @@ public class Fs {
                 if (b == '\0') {
                     break;
                 }
+                bytes_EOF_index++;
             }
             if (bytes_EOF_index == 0) {
                 bytes_EOF_index = stream.length;
@@ -110,7 +117,7 @@ public class Fs {
                 Scanner scanner = new Scanner(System.in);
                 byte[] stream = scanner.nextLine().getBytes();
                 scanner.close();
-                FakeComputer.CPU.memcpy(out_addr, stream, stream.length);
+                Computer.CPU.memcpy(out_addr, stream, stream.length);
             } catch (Exception e) {
                 return 1;
             }

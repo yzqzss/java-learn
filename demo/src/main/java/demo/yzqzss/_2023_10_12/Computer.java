@@ -1,6 +1,23 @@
 package demo.yzqzss._2023_10_12;
 
-public class FakeComputer {
+import lombok.Getter;
+import lombok.Setter;
+
+/*
+ * For reviewer: 
+ *      - CPU 状态机还没实现
+ *      - 内存 index 和 block 还没一一对应
+ *      - 文件系统做好了
+ *      - stream 还没实现
+ *      - shell parser 还没实现
+ */
+
+public class Computer {
+
+    @Getter
+    @Setter
+    private String _CPU; // For reviewer: @Getter 和 @Setter 这两个 lombok annotations 会自动生成 get_CPU() 和 set_CPU()
+
     public class RAM {
         // 4k blocks
         public boolean[] mem_index;
@@ -151,7 +168,6 @@ public class FakeComputer {
 
         // TODO: OS level func, should be in another OS class
         public static void free(boolean[] mem_index, byte[] addr){
-            // 天花板除
             int _4k_blocks = (addr.length + 4095) / 4096;
             assert _4k_blocks >= 0;
             assert mem_index.length >= _4k_blocks;
@@ -168,7 +184,7 @@ public class FakeComputer {
             }
 
             assert freed_blocks == _4k_blocks;
-            addr = null; // gc
+            addr = null; // gc, useless
         }
 
 
@@ -240,7 +256,7 @@ public class FakeComputer {
     }
 
     public static void main(String[] args){
-        FakeComputer computer = new FakeComputer();
+        Computer computer = new Computer();
         
         RAM ram = computer.new RAM();
         ram.setup_memindex(16);
@@ -249,11 +265,11 @@ public class FakeComputer {
 
         CPU.memset(buffer, (byte)0, buffer.length);
         
-        FakeComputer.IO io = computer.new IO();
+        Computer.IO io = computer.new IO();
 
         io.fs.mount_all();
 
-        io.echo("/dev/stdout", "0x7c00\n".getBytes());
+        io.echo("/dev/stdout", "0x7c00\n".getBytes()); // booting address
         io.echo("/dev/stdout", "Input a string: ".getBytes());
         
         io.read("/dev/stdin", buffer);
@@ -261,7 +277,7 @@ public class FakeComputer {
 
         // TODO: shell env to oprate files
         io.echo("/dev/stdout", "\n".getBytes());
-        // TODO: shell::parse_cmdline
+        // TODO: shell::parse_cmdline, need a parser
 
         byte[] buffer2 = CPU.malloc(ram.mem_index, 4096);
         io.echo("/somefile", "Hello, world! (disk text)\n".getBytes());
