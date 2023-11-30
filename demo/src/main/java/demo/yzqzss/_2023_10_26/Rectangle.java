@@ -3,7 +3,7 @@ package demo.yzqzss._2023_10_26;
 import lombok.Getter;
 import lombok.Setter;
 
-public class Rectangle implements Shape{
+public class Rectangle extends Shape{
     @Setter
     @Getter
     double x;
